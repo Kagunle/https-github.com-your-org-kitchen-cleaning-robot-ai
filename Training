@@ -1,0 +1,2 @@
+python scripts/train_bc.py
+python scripts/train_rl.py
