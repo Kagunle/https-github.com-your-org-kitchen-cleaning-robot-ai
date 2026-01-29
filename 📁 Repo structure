@@ -1,0 +1,42 @@
+kitchen-cleaning-robot-ai/
+│
+├── README.md                 # 1 link – giải thích toàn bộ system
+├── requirements.txt
+├── docker/
+│   └── Dockerfile
+│
+├── configs/
+│   ├── perception.yaml
+│   ├── planner.yaml
+│   └── policy.yaml
+│
+├── perception/
+│   ├── object_detection.py   # YOLO / SAM
+│   ├── scene_graph.py
+│   └── encoder.py
+│
+├── planner/
+│   ├── task_planner.py       # LLM / symbolic
+│   └── prompts/
+│
+├── policy/
+│   ├── rl_policy.py          # PPO / SAC
+│   ├── imitation.py
+│   └── rewards.py
+│
+├── simulation/
+│   ├── isaac_env.py
+│   ├── domain_randomization.py
+│   └── gym_wrapper.py
+│
+├── data/
+│   ├── demos/
+│   └── synthetic/
+│
+├── scripts/
+│   ├── train_rl.py
+│   ├── train_bc.py
+│   ├── eval.py
+│   └── sim2real.py
+│
+└── launch.py                 # end-to-end: perception → planner → policy
